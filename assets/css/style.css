@@ -1,0 +1,263 @@
+@font-face {
+    font-family: 'LeagueSpartan';
+    src: url(../fonts/LeagueSpartan-VariableFont_wght.ttf);
+}
+/***** Start config *****/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'LeagueSpartan';
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/***** End Start config *****/
+
+/***** Header *****/
+.sticky-header {
+    position: fixed;
+}
+
+.header-navbar {
+    display: flex;
+    padding: 2rem 3rem;
+}
+
+.logo {
+    color: white;
+    font-weight: 300;
+    border: 0 solid black;
+}
+
+.nav-list {
+    display: flex;
+    padding: 0.3rem 0 0 4rem  
+}
+
+.nav-item {
+    margin-right: 2rem;
+    color: white;
+    font-weight: 200;    
+}
+
+.hover-underline-fade{
+    position: relative;
+}
+
+.hover-underline-fade:after {
+    content: '';
+    position: absolute;
+    bottom: -0.3rem;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.hover-underline-fade:hover::after,
+.hover-underline-fade:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2rem, 0);
+}
+
+
+
+/***** End Header *****/
+
+/***** Homepage Grid *****/
+
+.homepage-container {
+    height: 100vh ;
+    overflow-y: hidden;
+}
+
+/***** Top Section *****/
+
+.top-section {
+    display: flex;
+    height: 70vh;
+    width: 100%;
+}
+
+.top-img-container {
+    width: 60%;
+    height: auto;
+
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.top-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slide-active {
+    opacity: 1;
+}
+
+.top-description {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    overflow: auto;
+    scrollbar-width: thin; /* pour les navigateurs prenant en charge la propriété scrollbar-width */
+    scrollbar-color: transparent transparent; 
+}
+
+.top-description-content {
+    width: 75%;
+}
+
+.top-description-title {
+    margin-bottom: 2rem;
+    font-size: 48px;
+}
+
+.top-description-text {
+    margin: 2rem 0;
+    line-height: 22px;
+    color: #A0A0A0;
+}
+
+.top-description-btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    padding: 0;
+    font-weight: 600;
+    letter-spacing: 12.5px ;
+    color: black;
+    transition: filter 0.3s;
+}
+
+.top-description-btn:hover .arrow-right {
+    transform: translateX(50%);
+    transition: transform 0.3s;
+}
+
+.hover-color-grey:hover {
+    filter: invert(58%) sepia(85%) saturate(10%) hue-rotate(52deg) brightness(95%) contrast(87%);
+}
+
+.arrow-right {
+    margin-left: 0.5rem;
+}
+
+.btn-group {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.swipe-btn {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    border: none;
+    background-color: black;
+    transition: background-color 0.3s;
+    color: white;
+    font-size: 40px;
+}
+
+.swipe-btn:hover {
+    background-color: #444444;
+}
+
+.left-swipe-btn {
+    transform: rotate(0.5turn)
+}
+
+.right-swipe-btn {
+    position: absolute;
+}
+
+/***** End Top Section *****/
+
+/***** Bottom Section *****/
+.bottom-section {
+    display: flex;
+    height: 30vh;
+    width: 100%;
+}
+
+.black-chair {
+    height: 100%;
+    width: 29.5%;
+}
+
+.white-chair {
+    height: 100%;
+    width: 30%;
+}
+
+.bottom-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.bottom-about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40.5%;    
+}
+
+.about-content {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+    scrollbar-width: thin; /* pour les navigateurs prenant en charge la propriété scrollbar-width */
+    scrollbar-color: transparent transparent;
+}
+
+.about-title {
+    letter-spacing: 6.67px;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.about-text {
+    line-height: 22px;
+    color: #A0A0A0;
+}
+
+/***** End Bottom Section *****/
+
+/***** End Homepage Grid *****/
+
